@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadhif Nur Fathin - Web Profile & Project Documentation</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #64748b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --accent: #3b82f6;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f1f5f9;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header and Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background-color: var(--primary);
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            margin-bottom: 40px;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: white;
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Card Sections */
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .card h3 {
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin: 20px 0 10px;
+        }
+        
+        /* Profile Section */
+        .profile-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+        
+        .profile-details {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .profile-details p {
+            margin-bottom: 10px;
+        }
+        
+        .profile-details strong {
+            color: var(--secondary);
+            display: inline-block;
+            width: 150px;
+        }
+        
+        /* List Styles */
+        ul, ol {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        /* Code Blocks */
+        code {
+            background-color: #f1f5f9;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.9rem;
+        }
+        
+        pre {
+            background-color: #1e293b;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+        
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f8fafc;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        
+        .footer-col {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-col h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid #334155;
+        }
+        
+        /* Utilities */
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+        
+        .badge-primary { background-color: var(--primary); }
+        .badge-success { background-color: var(--success); }
+        .badge-warning { background-color: var(--warning); }
+        .badge-danger { background-color: var(--danger); }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        
+        /* Tab System for Project Documentation */
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--secondary);
+            transition: all 0.3s;
+        }
+        
+        .tab-btn.active {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+            margin-bottom: -2px;
+        }
+        
+        .tab-btn:hover {
+            color: var(--primary);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>Nadhif Nur Fathin</h1>
+                </div>
+                <div class="nav-links">
+                    <a href="#profile">Profil</a>
+                    <a href="#exam">UTS Info</a>
+                    <a href="#project">Project</a>
+                    <a href="#contact">Kontak</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Ujian Tengah Semester Pemrograman Web 2</h1>
+            <p>Dokumentasi project Laravel + FluxUI untuk UTS Pemrograman Web 2 Semester 4 di Politeknik Harapan Bersama Tegal</p>
+            <a href="#project" class="btn">Lihat Dokumentasi</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Profile Section -->
+        <section id="profile" class="card animate">
+            <h2>Profil Mahasiswa</h2>
+            <div class="profile-container">
+                <img src="/api/placeholder/400/400" alt="Nadhif Nur Fathin" class="profile-image">
+                <div class="profile-details">
+                    <p><strong>Nama Lengkap:</strong> Nadhif Nur Fathin</p>
+                    <p><strong>Tempat, Tanggal Lahir:</strong> Tegal, 2 Februari 2005</p>
+                    <p><strong>Pendidikan:</strong> Politeknik Harapan Bersama Kota Tegal</p>
+                    <p><strong>Jurusan:</strong> Teknik Informatika</p>
+                    <p><strong>Alamat:</strong> Dawuhan, Talang, Tegal</p>
+                    <p><strong>No. HP:</strong> 087723486656</p>
+                    <p><strong>Gelar:</strong> Sarjana Terapan Teknik Informatika</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exam Info Section -->
+        <section id="exam" class="card animate">
+            <h2>Ujian Tengah Semester Genap</h2>
+            <div class="profile-container">
+                <div class="profile-details">
+                    <p><strong>Mata Kuliah:</strong> Pemrograman Web 2</p>
+                    <p><strong>Tanggal:</strong> Jumat, 9 Mei 2025</p>
+                    <p><strong>Jenis Tes:</strong> Project</p>
+                    <p><strong>Waktu:</strong> 4 Hari</p>
+                    <p><strong>Semester:</strong> 4</p>
+                    <p><strong>Dosen:</strong> Jamal Apriadi, S.Kom</p>
+                    <p><strong>Kelas:</strong> A, B, C, D</p>
+                </div>
+                <div class="profile-container">
+                <div class="profile-details">
+                    <p><strong>Email:</strong> nadhif.fathin@student.phb.ac.id</p>
+                    <p><strong>Github:</strong> <a href="#" target="_blank">https://github.com/nadhif234/laravel</a></p>
+                   
+                </div>
+                <div style="flex: 1;">
+                    <form id="contact-form" style="background-color: #f8fafc; padding: 20px; border-radius: 8px;">
+                        <h3>Kirim Pesan</h3>
+                        <div style="margin-bottom: 15px;">
+                            <label for="name" style="display: block; margin-bottom: 5px; font-weight: 600;">Nama</label>
+                            <input type="text" id="name" name="name" style="width: 100%; padding: 10px; border: 1px solid #e2e8f0; border-radius: 4px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <label for="email" style="display: block; margin-bottom: 5px; font-weight: 600;">Email</label>
+                            <input type="email" id="email" name="email" style="width: 100%; padding: 10px; border: 1px solid #e2e8f0; border-radius: 4px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <label for="message" style="display: block; margin-bottom: 5px; font-weight: 600;">Pesan</label>
+                            <textarea id="message" name="message" rows="4" style="width: 100%; padding: 10px; border: 1px solid #e2e8f0; border-radius: 4px;"></textarea>
+                        </div>
+                        <button type="submit" style="background-color: var(--primary); color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-weight: 600;">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Nadhif Nur Fathin</h3>
+                    <p>Mahasiswa Teknik Informatika di Politeknik Harapan Bersama Tegal.</p>
+                    <p>Spesialisasi dalam Pengembangan Web dan Mobile.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Project Lainnya</h3>
+                    <ul>
+                        <li><a href="#">Aplikasi Inventory PHP</a></li>
+                        <li><a href="#">Mobile App Flutter</a></li>
+                        <li><a href="#">E-Commerce API NodeJS</a></li>
+                        <li><a href="#">Dashboard React</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Tautan</h3>
+                    <ul>
+                        <li><a href="#profile">Profil</a></li>
+                        <li><a href="#exam">UTS Info</a></li>
+                        <li><a href="#project">Project</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Nadhif Nur Fathin | UTS Pemrograman Web 2</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Tab System
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab functionality
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons and contents
+                    tabBtns.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(this.dataset.tab).classList.add('active');
+                });
+            });
+            
+            // Countdown timer
+            const countdownEl = document.getElementById('countdown');
+            const deadline = new Date('May 13, 2025 23:59:59').getTime();
+            
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = deadline - now;
+                
+                if (distance < 0) {
+                    countdownEl.innerHTML = "Deadline telah berakhir!";
+                    return;
+                }
+                
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }
+            
+            // Update countdown every second
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Contact form handling
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const nameInput = this.querySelector('#name');
+                    const emailInput = this.querySelector('#email');
+                    const messageInput = this.querySelector('#message');
+                    
+                    if (!nameInput.value || !emailInput.value || !messageInput.value) {
+                        alert('Mohon isi semua field yang diperlukan');
+                        return;
+                    }
+                    
+                    // Simulate form submission
+                    alert('Pesan berhasil dikirim! Terima kasih.');
+                    this.reset();
+                });
+            }
+            
+            // Animate elements when scrolled into view
+            const animateElements = document.querySelectorAll('.animate');
+            
+            function checkIfInView() {
+                animateElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementTop < windowHeight - 100) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+            
+            // Set initial state for animations
+            animateElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            });
+            
+            // Check elements on load and scroll
+            window.addEventListener('load', checkIfInView);
+            window.addEventListener('scroll', checkIfInView);
+            
+            // Console log for testing
+            console.log("Dokumentasi UTS Web 2 - Nadhif Nur Fathin berhasil dimuat");
+        });
+    </script>
+</body>
+</html>
+                    <div style="background-color: #e2e8f0; border-radius: 12px; padding: 20px; text-align: center;">
+                        <h3>Sisa Waktu Project</h3>
+                        <div id="countdown" style="font-size: 1.5rem; font-weight: bold; margin: 10px 0; color: var(--primary);"></div>
+                        <p>Deadline: 13 Mei 2025, 23:59 WIB</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Documentation Section -->
+        <section id="project" class="card animate">
+            <h2>Dokumentasi Project Laravel + FluxUI</h2>
+            
+            <!-- Tab Navigation -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="installation">Instalasi</button>
+                <button class="tab-btn" data-tab="database">Database</button>
+                <button class="tab-btn" data-tab="features">Fitur</button>
+                <button class="tab-btn" data-tab="code">Code Samples</button>
+            </div>
+            
+            <!-- Tab Content -->
+            <div id="installation" class="tab-content active">
+                <h3>Langkah Instalasi:</h3>
+                <ol>
+                    <li>Pastikan Composer terinstal di sistem Anda</li>
+                    <li>Install Laravel menggunakan Composer:
+                        <pre><code>composer create-project laravel/laravel uts-web2</code></pre>
+                    </li>
+                    <li>Pindah ke direktori project:
+                        <pre><code>cd uts-web2</code></pre>
+                    </li>
+                    <li>Install FluxUI menggunakan Composer:
+                        <pre><code>composer require fluxui/framework</code></pre>
+                    </li>
+                    <li>Publish FluxUI assets:
+                        <pre><code>php artisan vendor:publish --tag=fluxui-assets</code></pre>
+                    </li>
+                    <li>Konfigurasi file .env untuk database:
+                        <pre><code>DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=uts_web2
+DB_USERNAME=root
+DB_PASSWORD=</code></pre>
+                    </li>
+                    <li>Jalankan migrasi database:
+                        <pre><code>php artisan migrate</code></pre>
+                    </li>
+                    <li>Jalankan server development:
+                        <pre><code>php artisan serve</code></pre>
+                    </li>
+                </ol>
+                <p>Untuk informasi lebih lanjut tentang FluxUI, silakan kunjungi <a href="https://fluxui.dev" target="_blank">fluxui.dev</a></p>
+            </div>
+            
+            <div id="database" class="tab-content">
+                <h3>Struktur Database</h3>
+                <p>Project ini menggunakan beberapa tabel utama untuk menyimpan data aplikasi:</p>
+                
+                <h4>Tabel Customers</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kolom</th>
+                            <th>Tipe</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>id</td>
+                            <td>bigint</td>
+                            <td>Primary key, auto increment</td>
+                        </tr>
+                        <tr>
+                            <td>name</td>
+                            <td>varchar(255)</td>
+                            <td>Nama pelanggan</td>
+                        </tr>
+                        <tr>
+                            <td>email</td>
+                            <td>varchar(255)</td>
+                            <td>Email pelanggan, unique</td>
+                        </tr>
+                        <tr>
+                            <td>address</td>
+                            <td>text</td>
+                            <td>Alamat pelanggan</td>
+                        </tr>
+                        <tr>
+                            <td>created_at</td>
+                            <td>timestamp</td>
+                            <td>Waktu pembuatan record</td>
+                        </tr>
+                        <tr>
+                            <td>updated_at</td>
+                            <td>timestamp</td>
+                            <td>Waktu update terakhir</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h4>Tabel Orders</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kolom</th>
+                            <th>Tipe</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>id</td>
+                            <td>bigint</td>
+                            <td>Primary key, auto increment</td>
+                        </tr>
+                        <tr>
+                            <td>customer_id</td>
+                            <td>bigint</td>
+                            <td>Foreign key ke tabel customers</td>
+                        </tr>
+                        <tr>
+                            <td>order_date</td>
+                            <td>date</td>
+                            <td>Tanggal pemesanan</td>
+                        </tr>
+                        <tr>
+                            <td>total_amount</td>
+                            <td>decimal(10,2)</td>
+                            <td>Total nilai pesanan</td>
+                        </tr>
+                        <tr>
+                            <td>status</td>
+                            <td>varchar(50)</td>
+                            <td>Status pesanan (pending, completed, cancelled)</td>
+                        </tr>
+                        <tr>
+                            <td>created_at</td>
+                            <td>timestamp</td>
+                            <td>Waktu pembuatan record</td>
+                        </tr>
+                        <tr>
+                            <td>updated_at</td>
+                            <td>timestamp</td>
+                            <td>Waktu update terakhir</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h4>Tabel Order Details</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kolom</th>
+                            <th>Tipe</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>id</td>
+                            <td>bigint</td>
+                            <td>Primary key, auto increment</td>
+                        </tr>
+                        <tr>
+                            <td>order_id</td>
+                            <td>bigint</td>
+                            <td>Foreign key ke tabel orders</td>
+                        </tr>
+                        <tr>
+                            <td>product_id</td>
+                            <td>bigint</td>
+                            <td>Foreign key ke tabel products</td>
+                        </tr>
+                        <tr>
+                            <td>quantity</td>
+                            <td>integer</td>
+                            <td>Jumlah produk</td>
+                        </tr>
+                        <tr>
+                            <td>unit_price</td>
+                            <td>decimal(10,2)</td>
+                            <td>Harga satuan</td>
+                        </tr>
+                        <tr>
+                            <td>subtotal</td>
+                            <td>decimal(10,2)</td>
+                            <td>Total harga (quantity * unit_price)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Diagram Relasi</h3>
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="/api/placeholder/800/400" alt="Database Relationship Diagram" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+            
+            <div id="features" class="tab-content">
+                <h3>Fitur Aplikasi</h3>
+                
+                <div style="display: flex; flex-wrap: wrap; gap: 20px; margin: 20px 0;">
+                    <div style="flex: 1; min-width: 250px; background-color: #f8fafc; padding: 20px; border-radius: 8px;">
+                        <h4>Dashboard</h4>
+                        <p>Panel admin dengan statistik dan visualisasi data penjualan</p>
+                        <span class="badge badge-primary">Admin</span>
+                        <span class="badge badge-success">Completed</span>
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 250px; background-color: #f8fafc; padding: 20px; border-radius: 8px;">
+                        <h4>Manajemen Produk</h4>
+                        <p>CRUD untuk mengelola produk (nama, harga, stok, deskripsi)</p>
+                        <span class="badge badge-primary">Admin</span>
+                        <span class="badge badge-success">Completed</span>
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 250px; background-color: #f8fafc; padding: 20px; border-radius: 8px;">
+                        <h4>Manajemen Pelanggan</h4>
+                        <p>CRUD untuk mengelola data pelanggan</p>
+                        <span class="badge badge-primary">Admin</span>
+                        <span class="badge badge-success">Completed</span>
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 250px; background-color: #f8fafc; padding: 20px; border-radius: 8px;">
+                        <h4>Manajemen Pesanan</h4>
+                        <p>Membuat dan mengelola pesanan dengan detail item</p>
+                        <span class="badge badge-primary">Admin</span>
+                        <span class="badge badge-warning">In Progress</span>
+                    </div>
+                </div>
+                
+                <h3>Detail Implementasi CRUD Produk</h3>
+                <p>Modul manajemen produk diimplementasikan dengan URL <code>/dashboard/products</code> dan memiliki fitur:</p>
+                
+                <ul>
+                    <li><strong>Create:</strong> Form tambah produk baru dengan validasi</li>
+                    <li><strong>Read:</strong> Daftar produk dengan fitur pagination dan pencarian</li>
+                    <li><strong>Update:</strong> Form edit produk dengan validasi</li>
+                    <li><strong>Delete:</strong> Konfirmasi hapus produk dengan soft delete</li>
+                </ul>
+                
+                <h3>Komponen FluxUI</h3>
+                <p>Project ini menggunakan beberapa komponen FluxUI untuk UI yang lebih interaktif:</p>
+                
+                <ul>
+                    <li><strong>DataTable:</strong> Untuk menampilkan dan mengelola data dengan fitur filter, sort, dan pagination</li>
+                    <li><strong>Modal:</strong> Untuk form tambah/edit dan konfirmasi</li>
+                    <li><strong>Alert:</strong> Untuk notifikasi sukses/error</li>
+                    <li><strong>Tabs:</strong> Untuk organisasi konten di beberapa halaman</li>
+                    <li><strong>Charts:</strong> Untuk visualisasi data di dashboard</li>
+                </ul>
+            </div>
+            
+            <div id="code" class="tab-content">
+                <h3>Code Samples</h3>
+                
+                <h4>ProductController.php</h4>
+                <pre><code>namespace App\Http\Controllers;
+
+use App\Models\Product;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
+class ProductController extends Controller
+{
+    /**
+     * Display a listing of products
+     */
+    public function index()
+    {
+        $products = Product::paginate(10);
+        return view('dashboard.products.index', compact('products'));
+    }
+
+    /**
+     * Show form for creating a new product
+     */
+    public function create()
+    {
+        return view('dashboard.products.create');
+    }
+
+    /**
+     * Store a new product
+     */
+    public function store(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'price' => 'required|numeric|min:0',
+            'stock' => 'required|integer|min:0',
+            'description' => 'nullable|string'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        Product::create($request->all());
+        
+        return redirect()->route('dashboard.products.index')
+            ->with('success', 'Product created successfully');
+    }
+
+    /**
+     * Show form for editing a product
+     */
+    public function edit(Product $product)
+    {
+        return view('dashboard.products.edit', compact('product'));
+    }
+
+    /**
+     * Update a product
+     */
+    public function update(Request $request, Product $product)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'price' => 'required|numeric|min:0',
+            'stock' => 'required|integer|min:0',
+            'description' => 'nullable|string'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        $product->update($request->all());
+        
+        return redirect()->route('dashboard.products.index')
+            ->with('success', 'Product updated successfully');
+    }
+
+    /**
+     * Delete a product
+     */
+    public function destroy(Product $product)
+    {
+        $product->delete();
+        
+        return redirect()->route('dashboard.products.index')
+            ->with('success', 'Product deleted successfully');
+    }
+}</code></pre>
+
+                <h4>Product.php (Model)</h4>
+                <pre><code>namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class Product extends Model
+{
+    use HasFactory, SoftDeletes;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+        'price',
+        'stock',
+        'description',
+    ];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'price' => 'decimal:2',
+        'stock' => 'integer',
+    ];
+
+    /**
+     * Get the order details for the product.
+     */
+    public function orderDetails()
+    {
+        return $this->hasMany(OrderDetail::class);
+    }
+}</code></pre>
+
+                <h4>create_products_table.php (Migration)</h4>
+                <pre><code>use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateProductsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('products', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->decimal('price', 10, 2);
+            $table->integer('stock')->default(0);
+            $table->text('description')->nullable();
+            $table->timestamps();
+            $table->softDeletes();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('products');
+    }
+}</code></pre>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="card animate">
+            <h2>Kontak</h2>
+            <div
